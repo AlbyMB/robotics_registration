@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Robotics Registration</title>
+  <style>
+    body{
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    
+    .form-container{
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+    }
+    
+    h2{
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    
+    h3{
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    
+    .name-fields{
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    .name-fields input{
+      width: 30%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-bottom: 5px;
+    }
+    
+    table{
+      width:100%;
+      border-collapse:collapse;
+      margin-top: 20px;     
+    }
+    
+    table, th, td{
+      border: 1px solid #ccc;
+    }
+    
+    th,td{
+      padding:10px;
+      text-align:left;
+    }
+    
+    th{
+      width:40%;
+      vertical-align: top;
+    }
+
+    button{  
+      margin-top: 10px;
+      height: 42px;
+      width: 100%;
+      background-color: white;
+      color: blue;
+      border: 1px solid blue;
+      border-radius: 18px;
+      transition: 0.3s;
+    } 
+    
+    button:hover{
+      background-color: blue;
+      color: white;
+}     
+  </style>
+</head>
+<body>
+  <div class="form-container">
+   <form action="/submit" method="POST">
+    <h2>Student's Information</h2>
+    <h3>Full Name: </h3>
+    <div class="name-fields">
+      <input name="studentFirstName" type="text" placeholder="First Name" required="required">
+      <input name="studentMiddleName" type="text" placeholder="Middle Name" required="required">
+      <input name="studentLastName" type="text" placeholder="Last Name" required="required">
+    </div>
+    <table>
+      <tr>
+        <th>Date Of Birth</th>
+        <td><input name="dateOfBirth" type="date" required="required"></td>
+      </tr>
+      <tr>
+        <th>Gender</th>
+        <td>
+          <select required="required" name="gender">
+            <option value="">Select Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <th>Phone Number</th>
+        <td><input type="tel" name="phoneNumber" placeholder="Phone Number" required="required"></td>
+      </tr>
+      <tr>
+        <th>Email</th>
+        <td><input type="email" name="email" placeholder="Email"></td>
+      </tr>
+      <tr>
+        <th>School Name</th>
+        <td><input type="text" name="schoolName" placeholder="School Name"></td>
+      </tr>
+      <tr>
+        <th>Grade</th>
+        <td><input type="text" name="grade" placeholder="Grade"></td>
+      </tr>
+    </table>
+    
+    <h2>Parent's Information</h2>
+    <h3>Parent's Full Name: </h3>
+    <div class="name-fields">
+      <input type="text" name="parentFirstName" placeholder="Parent's First Name">
+      <input type="text" name="parentMiddleName" placeholder="Parent's Middle Name">
+      <input type="text" name="parentLastName" placeholder="Parent's Last Name">
+    </div>
+    <h3>Address:</h3>
+    <table>
+      <tr>
+        <th>Street Name and Number</th>
+        <td><input type="text" name="street" placeholder="Street Name and Number"></td>
+      </tr>
+      <tr>
+        <th>City</th>
+        <td><input type="text" name="city" placeholder="City"></td>
+      </tr>
+      <tr>
+        <th>Postal Code</th>
+        <td><input type="text" name="postalCode"  placeholder="Postal Code"></td>
+      </tr>
+      <tr>
+        <th>2nd Phone Number</th>
+        <td><input type="tel" name="secondPhone" placeholder="Phone Number"></td>
+      </tr>
+      <tr>
+        <th>Remarks</th>
+        <td><textarea name="remarks" style="resize:none;" name="" id="" cols="30" rows="10" placeholder="Remarks"></textarea></td>
+      </tr>
+    </table>
+    <input type="submit" value="submit">  
+   </form>
+  </div>
+  
+
+</body>
+</html>
